@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование объявления | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div>
+                <div class="logo-text">
+                    <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content" style="max-width: 800px;">
+        <div class="content-form-card">
+            <h2>📝 Редактирование объявления</h2>
+            <p class="edit-meta-text">ID публикации: #1024 | Автор: проф. Иванов И.И. | Дата создания: 05.06.2026</p>
+            <form action="index.html" method="GET" onsubmit="alert('Изменения успешно сохранены!');">
+                <div class="form-group">
+                    <label class="form-label" for="edit-category">Категория объявления</label>
+                    <select id="edit-category" class="select-input" style="width: 100%; min-width: auto;" required>
+                        <option value="news" selected>Новости (Синяя полоса)</option>
+                        <option value="events">Мероприятия (Желтая полоса)</option>
+                        <option value="info">Объявления (Зеленая полоса)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="edit-title">Заголовок публикации</label>
+                    <input type="text" id="edit-title" class="form-control" value="Итоги студенческой олимпиады по математическому анализу" minlength="10" maxlength="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="edit-excerpt">Краткое описание (превью для главной страницы)</label>
+                    <input type="text" id="edit-excerpt" class="form-control" value="Поздравляем студентов 3 курса с успешным прохождением регионального этапа. Ознакомьтесь со списком победителей..." minlength="20" maxlength="200" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="edit-body">Полный текст объявления</label>
+                    <textarea id="edit-body" class="form-textarea" minlength="30" required>Уважаемые студенты и преподаватели! На прошлой неделе на базе факультета математики и компьютерных наук прошел региональный этап ежегодной студенческой олимпиады по дисциплине «Математический анализ».
+
+В соревновании приняли участие более 40 студентов со всего Северо-Кавказского федерального округа. Рады сообщить, что студенты 3 курса нашей кафедры продемонстрировали выдающиеся результаты и заняли весь пьедестал почета в личном зачете.
+
+Список победителей:
+1 место — Цаллагов Алан (3 курс, группа М-31)
+2 место — Плиева Мадина (3 курс, группа М-32)
+3 место — Дзуцев Георгий (3 курс, группа М-31)</textarea>
+                </div>
+
+                <div class="form-actions-row" style="justify-content: space-between; align-items: center;">
+                    <button type="button" class="btn btn-danger-outline" onclick="if(confirm('Вы уверены, что хотите безвозвратно удалить это объявление?')) { alert('Объявление удалено.'); window.location.href='index.html'; }">Удалить объявление</button>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="profile.html?role=teacher" class="btn btn-secondary">Отмена</a>
+                        <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.8rem; padding: 0;">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

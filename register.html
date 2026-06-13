@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация студента | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div>
+                <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                <div class="logo-text" style="margin-top: 8px;">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="auth-wrapper">
+            <h2 class="auth-title">Регистрация студента</h2>
+            
+            <form action="login.html" method="GET" onsubmit="alert('Регистрация успешна! Теперь вы можете войти в систему.');">
+                
+                <div class="form-group">
+                    <label class="form-label" for="reg-name">Полное имя (ФИО)</label>
+                    <input type="text" id="reg-name" class="form-control" placeholder="Иванов Александр Олегович" minlength="5" maxlength="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="reg-group">Учебная группа</label>
+                    <input type="text" id="reg-group" class="form-control" placeholder="например, М-31 или КН-21" minlength="3" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="reg-email">Электронная почта</label>
+                    <input type="email" id="reg-email" class="form-control" placeholder="student@nosu.ru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" class="form-control" placeholder="Минимум 6 символов" minlength="6" maxlength="20" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Создать аккаунт</button>
+            </form>
+            
+            <div class="auth-redirect">
+                Уже зарегистрированы? <a href="login.html">Войти</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.8rem; padding: 0;">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление пользователями | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div>
+                <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                <div class="logo-text">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="admin-grid-layout">
+            <aside class="admin-sidebar">
+                <p class="admin-menu-title">Навигация</p>
+                <ul class="profile-menu">
+                    <li><a href="admin_dashboard.html"> Дашборд</a></li>
+                    <li><a href="admin_users.html" class="active"> Пользователи</a></li>
+                    <li><a href="admin_categories.html"> Категории</a></li>
+                    <li><a href="profile.html?role=admin"> Вернуться в профиль</a></li>
+                </ul>
+            </aside>
+
+            <section class="admin-table-card">
+                <h3>Список пользователей факультета</h3>
+                <p class="edit-meta-text" style="margin-bottom: 1rem;">Всего зарегистрировано: 342 аккаунта (320 студентов, 21 преподаватель, 1 администратор).</p>
+                <table class="admin-responsive-table">
+                    <thead>
+                        <tr>
+                            <th>ФИО пользователя</th>
+                            <th>Email (Логин)</th>
+                            <th>Роль системы</th>
+                            <th>Статус</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Иванов Иван Иванович</strong></td>
+                            <td>ivanov@nosu.ru</td>
+                            <td>
+                                <select class="admin-select-sm" onchange="alert('Роль пользователя успешно изменена');">
+                                    <option value="student">Студент</option>
+                                    <option value="teacher" selected>Преподаватель</option>
+                                    <option value="admin">Администратор</option>
+                                </select>
+                            </td>
+                            <td><span class="status-badge status-active">Активен</span></td>
+                            <td><button class="btn btn-table-action btn-table-danger" onclick="if(confirm('Заблокировать доступ пользователю?')) alert('Пользователь заблокирован');">Бан</button></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Цаллагов Алан Олегович</strong></td>
+                            <td>tsallagov@nosu.ru</td>
+                            <td>
+                                <select class="admin-select-sm" onchange="alert('Роль пользователя успешно изменена');">
+                                    <option value="student" selected>Студент</option>
+                                    <option value="teacher">Преподаватель</option>
+                                    <option value="admin">Администратор</option>
+                                </select>
+                            </td>
+                            <td><span class="status-badge status-active">Активен</span></td>
+                            <td><button class="btn btn-table-action btn-table-danger" onclick="if(confirm('Заблокировать доступ пользователю?')) alert('Пользователь заблокирован');">Бан</button></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Петров Сидор Сидорович</strong></td>
+                            <td>petrov99@mail.ru</td>
+                            <td>
+                                <select class="admin-select-sm" onchange="alert('Роль пользователя успешно изменена');">
+                                    <option value="student" selected>Студент</option>
+                                    <option value="teacher">Преподаватель</option>
+                                    <option value="admin">Администратор</option>
+                                </select>
+                            </td>
+                            <td><span class="status-badge status-blocked">Забанен</span></td>
+                            <td><button class="btn btn-table-action" style="background: #e2e8f0; color: #1e293b; border: 1px solid #cbd5e1;" onclick="alert('Доступ успешно восстановлен');">Разбанить</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.8rem; padding: 0;">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

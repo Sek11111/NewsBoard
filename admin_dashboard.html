@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div>
+                <div class="logo-text">
+                    <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="admin-grid-layout">
+            <aside class="admin-sidebar">
+                <p class="admin-menu-title">Навигация</p>
+                <ul class="profile-menu">
+                    <li><a href="admin_dashboard.html" class="active"> Дашборд</a></li>
+                    <li><a href="admin_users.html"> Пользователи</a></li>
+                    <li><a href="admin_categories.html"> Категории</a></li>
+                    <li><a href="profile.html?role=admin"> Вернуться в профиль</a></li>
+                </ul>
+            </aside>
+
+            <section style="display: flex; flex-direction: column;">
+                <div class="stats-cards-grid">
+                    <div class="stat-card blue-top">
+                        <p class="stat-card-title">Пользователи</p>
+                        <p class="stat-card-number">342</p>
+                    </div>
+                    <div class="stat-card purple-top">
+                        <p class="stat-card-title">Объявления</p>
+                        <p class="stat-card-number">56</p>
+                    </div>
+                    <div class="stat-card green-top">
+                        <p class="stat-card-title">Комментарии</p>
+                        <p class="stat-card-number">1,124</p>
+                    </div>
+                </div>
+
+                <div class="admin-logs-card">
+                    <h3>Последние действия в системе</h3>
+                    
+                    <div class="log-item">
+                        <div class="log-text-block">
+                            Преподаватель <span class="log-user-ref">проф. Иванов И.И.</span> создал объявление <span class="log-user-ref">«Итоги студенческой олимпиады...»</span>
+                        </div>
+                        <span class="log-time-badge">Сегодня, 15:30</span>
+                    </div>
+
+                    <div class="log-item">
+                        <div class="log-text-block">
+                            Студент <span class="log-user-ref">Алан Цаллагов</span> оставил комментарий к объявлению ID #1024
+                        </div>
+                        <span class="log-time-badge">Сегодня, 14:15</span>
+                    </div>
+
+                    <div class="log-item">
+                        <div class="log-text-block">
+                            Система автоматически заблокировала подозрительный комментарий от анонимного IP
+                        </div>
+                        <span class="log-time-badge">Вчера, 21:04</span>
+                    </div>
+
+                    <div class="log-item">
+                        <div class="log-text-block">
+                            Новый пользователь <span class="log-user-ref">Мадина Плиева</span> успешно прошла регистрацию
+                        </div>
+                        <span class="log-time-badge">04.06.2026, 11:42</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.8rem; padding: 0;">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

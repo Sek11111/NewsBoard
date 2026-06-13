@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр объявления | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-block">
+                <div class="logo-text">
+                    <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Вход</a>
+                <a href="register.html" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="announcement-single">
+            <div class="announcement-header">
+                <span class="badge badge-news">Новости</span>
+                <h2 class="announcement-title">Итоги студенческой олимпиады по математическому анализу</h2>
+                <div class="card-meta" style="border: none; padding: 0; margin: 0;">
+                    <span>📅 Опубликовано: 05.06.2026</span>
+                    <span>👁️ Просмотров: 142</span>
+                    <span>👤 Автор: проф. Иванов И.И.</span>
+                </div>
+            </div>
+            
+            <div class="announcement-body">
+                <p>Уважаемые студенты и преподаватели! На прошлой неделе на базе факультета математики и компьютерных наук прошел региональный этап ежегодной студенческой олимпиады по дисциплине «Математический анализ».</p>
+                <p>В соревновании приняли участие более 40 студентов со всего Северо-Кавказского федерального округа. Рады сообщить, что студенты 3 курса нашей кафедры продемонстрировали выдающиеся результаты и заняли весь пьедестал почета в личном зачете.</p>
+                <p><strong>Список победителей:</strong><br>
+                1 место — Цаллагов Алан (3 курс, группа М-31)<br>
+                2 место — Плиева Мадина (3 курс, группа М-32)<br>
+                3 место — Дзуцев Георгий (3 курс, группа М-31)</p>
+                <p>Поздравляем ребят с заслуженной победой и выражаем огромную благодарность преподавателям кафедры за качественную подготовку студентов к олимпиадам столь высокого уровня!</p>
+            </div>
+        </article>
+
+        <section class="comments-section">
+            <h3>Комментарии (3)</h3>
+            <div class="comment-card">
+                <div class="comment-header">
+                    <span class="comment-author">Алан Цаллагов<span class="comment-author-rank" style="color: #64748b;">Студент</span></span>
+                    <span class="comment-date">05.06.2026, 15:30</span>
+                </div>
+                <div class="comment-text">
+                    Спасибо большое кафедре за организацию и веру в нас! Задачи были очень интересными, особенно последняя на ряды.
+                </div>
+            </div>
+            <div class="comment-card">
+                <div class="comment-header">
+                    <span class="comment-author">Анна Петрова<span class="comment-author-rank">Преподаватель</span></span>
+                    <span class="comment-date">05.06.2026, 17:10</span>
+                </div>
+                <div class="comment-text">
+                    Поздравляю! Великолепный результат. Ждем вас на научном семинаре в четверг, нужно будет обсудить публикацию тезисов по вашим решениям.
+                </div>
+            </div>
+            <div class="comment-card">
+                <div class="comment-header">
+                    <span class="comment-author">Сослан К.<span class="comment-author-rank" style="color: #64748b;">Студент</span></span>
+                    <span class="comment-date">06.06.2026, 10:05</span>
+                </div>
+                <div class="comment-text">
+                    Гордость нашего факультета! Поздравляю парней и Мадину!
+                </div>
+            </div>
+
+            <form class="comment-form" onsubmit="event.preventDefault(); alert('Комментарий отправлен (демо)');">
+                <h4 style="color: #0c2e4e; margin-bottom: 1rem; font-weight: 700;">Оставить комментарий</h4>
+                <textarea placeholder="Напишите ваш комментарий... Комментирование доступно только для авторизованных пользователей." required></textarea>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>ФМКН СОГУ, Кафедра математики</p>
+                <p>г. Владикавказ, ул. Ватутина, 44</p>
+                <p>Тел: +7 (8672) 00-00-00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила доски</a></li>
+                    <li><a href="contacts.html">Схема проезда</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Рассылка</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Ваш email" required style="padding: 0.5rem; border-radius: 4px; border: none; margin-right: 0.5rem;">
+                    <button class="btn btn-primary" type="submit">ОК</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

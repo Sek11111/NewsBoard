@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление категориями | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div>
+                <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                <div class="logo-text">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="admin-grid-layout">
+            <aside class="admin-sidebar">
+                <p class="admin-menu-title">Навигация</p>
+                <ul class="profile-menu">
+                    <li><a href="admin_dashboard.html"> Дашборд</a></li>
+                    <li><a href="admin_users.html"> Пользователи</a></li>
+                    <li><a href="admin_categories.html" class="active"> Категории</a></li>
+                    <li><a href="profile.html?role=admin"> Вернуться в профиль</a></li>
+                </ul>
+            </aside>
+
+            <section style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="admin-table-card" style="padding: 1.5rem 2rem;">
+                    <h3>➕ Добавить новую категорию</h3>
+                    <form action="admin_categories.html" method="GET" onsubmit="event.preventDefault(); alert('Новая категория успешно создана!');" style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <label class="form-label" for="cat-name">Название категории</label>
+                            <input type="text" id="cat-name" class="form-control" placeholder="например, Спортивные события" required>
+                        </div>
+                        <div style="min-width: 200px;">
+                            <label class="form-label" for="cat-slug">Системный идентификатор (Slug)</label>
+                            <input type="text" id="cat-slug" class="form-control" placeholder="например, sports" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="padding: 0.65rem 1.5rem;">Создать</button>
+                    </form>
+                </div>
+
+                <div class="admin-table-card">
+                    <h3>Существующие категории объявлений</h3>
+                    
+                    <table class="admin-responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Название категории</th>
+                                <th>Системный код (Slug)</th>
+                                <th>Цветовая метка (UI)</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" class="form-control" value="Новости" style="padding: 0.4rem;" required></td>
+                                <td><code>news</code></td>
+                                <td><span class="badge badge-news">Синяя</span></td>
+                                <td>
+                                    <div style="display: flex; gap: 0.5rem;">
+                                        <button class="btn btn-table-action" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;" onclick="alert('Изменения сохранены');">Обновить</button>
+                                        <button class="btn btn-table-action btn-table-danger" onclick="if(confirm('Удалить категорию? Все связанные объявления будут стерты.')) alert('Категория удалена');">Удалить</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" class="form-control" value="Мероприятия" style="padding: 0.4rem;" required></td>
+                                <td><code>events</code></td>
+                                <td><span class="badge badge-event">Желтая</span></td>
+                                <td>
+                                    <div style="display: flex; gap: 0.5rem;">
+                                        <button class="btn btn-table-action" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;" onclick="alert('Изменения сохранены');">Обновить</button>
+                                        <button class="btn btn-table-action btn-table-danger" onclick="if(confirm('Удалить категорию? Все связанные объявления будут стерты.')) alert('Категория удалена');">Удалить</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" class="form-control" value="Объявления" style="padding: 0.4rem;" required></td>
+                                <td><code>info</code></td>
+                                <td><span class="badge badge-info">Зеленая</span></td>
+                                <td>
+                                    <div style="display: flex; gap: 0.5rem;">
+                                        <button class="btn btn-table-action" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;" onclick="alert('Изменения сохранены');">Обновить</button>
+                                        <button class="btn btn-table-action btn-table-danger" onclick="if(confirm('Удалить категорию? Все связанные объявления будут стерты.')) alert('Категория удалена');">Удалить</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.8rem; padding: 0;">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

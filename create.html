@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание объявления | Кафедра математики СОГУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div>
+                <img src="images/logo.png" class="header_logo-img" alt="СОГУ">
+                <div class="logo-text" style="margin-top: 8px;">
+                    <h1>Кафедра Математики</h1>
+                    <p>СОГУ им. К. Л. Хетагурова</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О кафедре</a></li>
+                    <li><a href="rules.html">Правила</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content" style="max-width: 800px;">
+        <div class="content-form-card">
+            <h2>➕ Создание нового объявления</h2>
+            <form action="index.html" method="GET" onsubmit="alert('Объявление успешно опубликовано на доске!');">
+                
+                <div class="form-group">
+                    <label class="form-label" for="post-category">Категория объявления</label>
+                    <select id="post-category" class="select-input" style="width: 100%; min-width: auto;" required>
+                        <option value="news">Новости (Синяя полоса)</option>
+                        <option value="events">Мероприятия (Желтая полоса)</option>
+                        <option value="info">Объявления (Зеленая полоса)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="post-title">Заголовок публикации</label>
+                    <input type="text" id="post-title" class="form-control" placeholder="Введите краткий емкий заголовок" minlength="10" maxlength="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="post-excerpt">Краткое описание (превью для главной страницы)</label>
+                    <input type="text" id="post-excerpt" class="form-control" placeholder="Одно-два предложения для сетки объявлений" minlength="20" maxlength="200" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="post-body">Полный текст объявления</label>
+                    <textarea id="post-body" class="form-textarea" placeholder="Подробно опишите суть новости, расписание, место проведения или требования..." minlength="30" required></textarea>
+                </div>
+
+                <div class="form-actions-row">
+                    <a href="profile.html?role=teacher" class="btn btn-secondary">Отмена</a>
+                    <button type="submit" class="btn btn-primary">Опубликовать</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.8rem; padding: 0;">
+            <p>&copy; 2026 Северо-Осетинский государственный университет. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
